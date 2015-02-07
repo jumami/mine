@@ -1,0 +1,42 @@
+<template name="layout">
+    {{#ionBody}}
+    {{> ionNavBar  }}
+
+    {{#ionNavView}}
+    {{> yield}}
+    {{/ionNavView}}
+
+
+
+
+    <!--{{#if isAndroid}}-->
+    <!--{{#ionTabs style="android"}}-->
+    <!--{{> ionTab title="Trending" path="trending" icon="android-star"}}-->
+    <!--{{> ionTab title="Recent" path="recent" icon="android-time"}}-->
+    <!--{{> ionTab title="Notifications" path="notifications" icon="android-notifications"}}-->
+    <!--{{> ionTab title="Profile" path="profile" icon="android-happy"}}-->
+    <!--{{/ionTabs}}-->
+    <!--{{else}}-->
+    <!--{{#ionTabs style="ios"}}-->
+    <!--{{> ionTab title="Trending" path="trending" iconOff="ios-bolt-outline" iconOn="ios-bolt"}}-->
+    <!--{{> ionTab title="Recent" path="recent" iconOff="ios-clock-outline" iconOn="ios-clock"}}-->
+    <!--{{> ionTab title="Notifications" path="notifications" iconOff="ios-bell-outline" iconOn="ios-bell"}}-->
+    <!--{{> ionTab title="Profile" path="profile" iconOff="ios-person-outline" iconOn="ios-person"}}-->
+    <!--{{/ionTabs}}-->
+    <!--{{/if}}-->
+
+    {{#ionTabs style="ios"}}
+    <!--{{> ionTab title="Trending" path="trending" iconOff="ios-bolt-outline" iconOn="ios-bolt"}}-->
+    {{> ionTab title="Главная" path="main" iconOff="ios-clock-outline" iconOn="ios-clock"}}
+    {{> ionTab title="Искать" path="find" iconOff="ios-search" iconOn="ios-search"}}
+    {{> ionTab title="Добавить" path="addMine" iconOff="ios-plus-outline" iconOn="ios-plus" }}
+
+    {{> ionTab title="Я" path="profile" iconOff="ios-person-outline" iconOn="ios-person"}}
+    {{/ionTabs}}
+
+    {{/ionBody}}
+
+
+
+    <!--{{>yield}}-->
+</template>

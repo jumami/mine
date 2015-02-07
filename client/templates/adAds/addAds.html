@@ -1,0 +1,27 @@
+<template name="addAds">
+
+    {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="main" text="Главная"}}
+    {{/contentFor}}
+
+    {{#contentFor "headerTitle"}}
+    <h1 class="title">Выбирать</h1>
+    {{/contentFor}}
+
+
+    {{#ionView}}
+    {{#ionContent}}
+    {{#ionList}}
+    <form class="new-task">
+        <label class="item item-input">
+        <input type="text" name="text" id="text" placeholder="Type to add new ad" />
+        </label>
+        <input type="hidden" id="category" value="6exCQPBvrDdTkzfWZ"/>
+
+        <button class="button button-block" type="button" id="submit" >Сохранить</button>
+    </form>
+
+    {{/ionList}}
+    {{/ionContent}}
+    {{/ionView}}
+</template>

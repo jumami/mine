@@ -1,0 +1,29 @@
+<template name="main">
+
+    {{#contentFor "headerTitle"}}
+    <h1 class="title">Главная</h1>
+    {{/contentFor}}
+
+
+    {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear" data-ion-modal="_contactsNew">{{> ionIcon icon="ios-plus-empty"}}</button>
+    {{/contentFor}}
+
+    <style>
+        .my-list-bottom{
+            border-bottom:1px black solid;
+        }
+    </style>
+    {{#ionView}}
+        {{#ionContent}}
+            {{#ionList }}
+                {{#each mainCategories}}
+                    <h3 class="my-list-bottom">
+                        <a style="text-decoration: none;" href="{{pathFor 'catSelect'}}">{{first}}</a></h3>
+                {{/each}}
+            {{/ionList}}
+        {{/ionContent}}
+    {{/ionView}}
+
+
+</template>

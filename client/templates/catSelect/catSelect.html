@@ -1,0 +1,38 @@
+<template name="catSelect">
+
+
+    {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="main" text="Главная"}}
+    {{/contentFor}}
+
+    {{#contentFor "headerTitle"}}
+    <h1 class="title">Выбирать</h1>
+    {{/contentFor}}
+
+
+    <div class="posts">
+
+        {{#ionView}}
+        {{#ionContent}}
+        {{#ionList}}
+        {{#each catSelect}}
+        <div style="height: 30px;width: 360px;clear: both;">
+            <a style="text-decoration: none;float: right;width: 60px;display: inline;" href="{{pathFor 'catSelectAds'}}">ПОИСК</a>
+            {{#if first}}
+                <h3 style="border-bottom:1px black solid;float: left;width: 250px;display:inline;margin-right: 30px;">
+                <a style="text-decoration: none;width: 250px;float: left;" href="{{pathFor 'catSelect'}}">{{first}}</a></h3>
+            {{else}}
+                <h3>{{first}}</h3>
+            {{/if}}
+        <!--{{> adItem}}-->
+        <!--<br>-->
+        <div style="clear:both;"></div>
+        </div>
+        {{/each}}
+        {{/ionList}}
+        {{/ionContent}}
+        {{/ionView}}
+
+
+    </div>
+</template>

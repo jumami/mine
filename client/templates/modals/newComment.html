@@ -1,0 +1,12 @@
+
+<template name="newComment">
+    {{#ionModal focusFirstInput=true title="New Comment"}}
+    {{#autoForm collection="Ads" id="comments-new-form" type="insert"}}
+    {{> quickField name='productId' type="hidden" value=productId label=false}}
+    {{> quickField name='text'}}
+    <div class="padding">
+        <button type="submit" class="button button-positive button-block">Post Comment</button>
+    </div>
+    {{/autoForm}}
+    {{/ionModal}}
+</template>

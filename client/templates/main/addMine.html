@@ -1,0 +1,25 @@
+<template name="addMine">
+
+    {{#contentFor "headerTitle"}}
+    <h1 class="title">Выбирать</h1>
+    {{/contentFor}}
+    <style>
+        .my-list-bottom{
+            border-bottom:1px black solid;
+        }
+    </style>
+    {{#ionView}}
+    {{#ionContent}}
+    {{#ionList }}
+    {{#each mainCategories}}
+    <h3 class="my-list-bottom">
+        <a style="text-decoration: none;" href="{{pathFor 'addCatSelect'}}">{{first}}</a>
+    </h3>
+    {{/each}}
+    {{/ionList}}
+    {{/ionContent}}
+    {{/ionView}}
+
+
+
+</template>

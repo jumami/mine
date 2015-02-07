@@ -1,0 +1,25 @@
+<template name="catSelectAds">
+
+    {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="main" text="Главная"}}
+    {{/contentFor}}
+
+
+<br>
+    <br>
+
+    {{#ionView}}
+        {{#ionContent}}
+            {{#ionList}}
+                {{#each catSelectAds}}
+
+                    {{text}}
+                    <br>
+                    <br>
+                {{/each}}
+            {{/ionList}}
+        {{/ionContent}}
+    {{/ionView}}
+
+
+</template>

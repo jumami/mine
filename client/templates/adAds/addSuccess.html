@@ -1,0 +1,29 @@
+<template name="addSuccess">
+
+    {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="main" text="Главная"}}
+    {{/contentFor}}
+
+    {{#contentFor "headerTitle"}}
+    <h1 class="title">Успешно сохранен!!!</h1>
+    {{/contentFor}}
+
+
+    {{#ionView}}
+    {{#ionContent}}
+    {{#ionList}}
+
+Luck!!!
+
+    2 {{_id}}
+
+    <a class="button button-active"  href="{{pathFor 'addShowAd'}}">СЮДА!!!</a>
+
+
+
+    {{/ionList}}
+    {{/ionContent}}
+    {{/ionView}}
+</template>
+
+<!--{{> adSuccess}}-->
